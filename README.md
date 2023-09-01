@@ -1,34 +1,62 @@
-# `Turborepo` Vite starter
+# devtools-tips-sandbox
 
-This is an official starter Turborepo.
+This is a companion repository for an upcoming blog series about browser dev-tools.
 
-## Using this example
+## Run this sandbox:
 
-Run the following command:
+> required: `git` and `pnpm`
 
-```sh
-npx create-turbo@latest -e with-vite
+
+### 1. Clone the repository:
+
+```zsh
+git clone https://github.com/Robjam/dev-tools-playground.git
 ```
 
-## What's inside?
+### 2. Install dependencies
 
-This Turborepo includes the following packages and apps:
+```zsh
+pnpm install
+```
 
-### Apps and Packages
+### 3. Run the two applications
 
-- `docs`: a vanilla [vite](https://vitejs.dev) ts app
-- `web`: another vanilla [vite](https://vitejs.dev) ts app
-- `ui`: a stub component & utility library shared by both `web` and `docs` applications
-- `eslint-config-custom`: shared `eslint` configurations
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+```zsh
+pnpm run dev
+```
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
+You should see something like:
 
-### Utilities
+```zsh
+❯ pnpm run dev
 
-This Turborepo has some additional tools already setup for you:
+> @ dev /devtools-tips-sandbox
+> turbo run dev
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+╭────────────────────────────────────────────────────────────────────────╮
+│                                                                        │
+│                  Update available v1.10.12 ≫ v1.10.13                  │
+│    Changelog: https://github.com/vercel/turbo/releases/tag/v1.10.13    │
+│               Run "npx @turbo/codemod update" to update                │
+│                                                                        │
+│      Follow @turborepo for updates: https://twitter.com/turborepo      │
+╰────────────────────────────────────────────────────────────────────────╯
+• Packages in scope: , eslint-config-custom, tsconfig, ui, web
+• Running dev in 5 packages
+• Remote caching disabled
+:dev: cache bypass, force executing 997faae0e43d3ddf
+web:dev: cache bypass, force executing b24921d658594c7f
+:dev: 
+:dev: > @ dev /devtools-tips-sandbox/apps/api
+:dev: > tsx src/index.ts
+:dev: 
+web:dev: 
+web:dev: > web@0.0.0 dev /devtools-tips-sandbox/apps/web
+web:dev: > vite
+web:dev: 
+web:dev: 
+web:dev:   VITE v4.0.3  ready in 112 ms
+web:dev: 
+web:dev:   ➜  Local:   http://localhost:5173/
+web:dev:   ➜  Network: use --host to expose
+```
